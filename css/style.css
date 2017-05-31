@@ -1,0 +1,53 @@
+html, body{
+  overflow-x: hidden;
+} /* -x? what counts as overflow? */
+body{
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: "Varela Round", Helvetica, Arial, sans-serif;
+}
+h2{
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+p{
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 100;  /* What is font-weight and what is 
+  the difference between "normal" and 100? */
+}
+
+/* GRID */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+.container:before,.container:after {
+   content: " ";
+   display: table;
+ }  /* what do these pseudo class do? and what should be in te " "? */
+
+ .container:after {
+   clear: both;
+ } /* What does this do? Can you explain more of the following?
+ This “micro clearfix” generates pseudo-elements 
+ and sets their display to table. This creates an anonymous table-cell 
+ and a new block formatting context that means 
+ the :before pseudo-element prevents top-margin collapse. 
+ The :after pseudo-element is used to clear the floats. 
+ As a result, there is no need to hide any generated content 
+ and the total amount of code needed is reduced. */
+
+ .one-half, .one-third, .one-fourth {
+   width:96%;
+   float:left;
+   position:relative;
+   min-height: 1px; /* what does min-height do? */
+   margin:0 2% 20px;
+ }
