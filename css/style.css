@@ -75,6 +75,12 @@ p{
      width: 1170px;
    }
  }
+ @media (min-width: 1920px) {
+   .container hero { /* Not sure why "hero" is white...Should it be "hero" instead of "container hero"? 
+   I did 97% of the screen size according to the ratial observed above */
+     width: 1870px;
+   }
+ }
 
  /* Header */
  header {
