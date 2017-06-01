@@ -45,9 +45,102 @@ p{
  and the total amount of code needed is reduced. */
 
  .one-half, .one-third, .one-fourth {
-   width:96%;
+   width:96%; /* why here they are all 96%? How doea that work? In media query, they all have different ones. */
    float:left;
    position:relative;
    min-height: 1px; /* what does min-height do? */
    margin:0 2% 20px;
+ }
+ @media (min-width: 768px) {
+   .container {
+     width: 750px;
+   }
+ }
+ @media (min-width: 992px) {
+   .container {
+     width: 970px;
+   }
+   .one-half {
+     width:46%;
+   }
+   .one-third {
+     width:29.33333%;
+   }
+   .one-fourth {
+     width:21%;
+   }
+ } /* Why only specify the above in this one? Not the one whose min-width is 768px or 1200px? */
+ @media (min-width: 1200px) {
+   .container {
+     width: 1170px;
+   }
+ }
+
+ /* Header */
+ header {
+   color:#FFFFFF;
+   background: #34495E;
+   background-image: linear-gradient(206deg, #5F81A3 0%, #34495E 94%); /* Why we need to flip and the copy from Sketch are not correct? */
+ }
+ header nav {
+   padding:1em 0;
+ }
+ header nav ul {
+   display:inline; /* Why here is inline? What about inline-block? --> Does this mean the "sign in / sign up together" will still be 
+   the same object as the logo, but we want sign in and sign up two be two different objects within themselves? */
+   text-align: right;
+   float:right;
+   margin:0;
+ }
+ header nav ul > li {
+   list-style-type: none; /* to remove the underline of a link */
+   display: inline-block;
+   margin:0 15px;
+ }
+ header nav ul > li.btn-outline {
+   padding:10px 15px;
+   border:2px solid #FFFFFF;
+   border-radius: 4px;
+ }
+ header nav ul > li.btn-outline:hover {  /* Here "hover" is a pseudo class */
+   background:#FFFFFF;
+ }
+ header nav ul > li > a {  /* Here "a" refers to the link? */
+   color:#FFFFFF;
+   text-decoration: none;
+ }
+ header nav ul > li.btn-outline:hover > a { /* So here with or without ">" both work? */
+   color:#34495E;
+ }
+ header .hero {
+   text-align: center;
+   display:block;
+   position: relative;
+ }
+ header .hero h1 {
+   font-size:48px;
+   font-weight: normal;
+   margin:95px 0 0; /* When you have three margins, which one is not specified? */
+ }
+ header .hero p {
+   font-size: 22px;
+   line-height: 26px;
+   font-weight: 100;
+   margin:10px 0 40px;
+ }
+ header .hero img {
+   display: block;
+   margin:3em auto 0;
+ }
+
+ /* Buttons */
+ .btn {
+   background: #2ECC71;
+   box-shadow: 0 2px 0 0 #22894E;
+   border-radius: 4px;
+   font-weight: 700; /* font-family: Lato-Bold?? */
+   padding: 10px 30px;
+   color: #FFFFFF;
+   border: 2px solid #2ECC71; /* Why need a border? Seems the same with or without it? */
+   text-decoration: none;
  }
