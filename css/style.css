@@ -311,6 +311,79 @@ p{
   margin-top: 20px;
  }
 
+/* Call to action */
+.call-to-action div {
+   padding:0em 0;
+   text-align: center;
+   margin-bottom: 6em;
+ }
+ .call-to-action h2 {
+   color:#3498DB;
+ }
+ .call-to-action p {
+   line-height: 24px;
+   margin-bottom: 30px; 
+ }
+ /* Why can't I do the following to change the spacing?
+ .call-to-action.container.btn {
+   position: relative;
+   margin-top: 50px;
+ } */
+
+ /* Footer */
+ footer {
+   background-color: #34495E;
+   background-image: linear-gradient(to top, #3498DB 0%, #3498DB 50%, #34495E 50%, #34495E 100%); /* What does this do? */
+   color: #FFFFFF;
+   height: 150px;
+   position: relative;
+   overflow: hidden;
+   z-index: 0; /* What does this do? Why not 1? */
+ }
+ footer p, footer nav ul {
+   font-size:14px;
+   font-weight:100;
+   text-align: center;
+   margin: 10px auto 0;
+ }
+ footer nav ul li {
+   list-style-type: none;
+   display: inline;
+ }
+ footer nav ul li a {
+   color:#FFFFFF;
+   text-decoration: none; /* remove underline */
+ }
+ footer .right-footer-block {
+   background-color: transparent; /* This doesn't specify the div size so it will be as long as the dark blue 
+   background-color. But doesn transparent mean it's showing the dark blue then? */
+ }
+ footer .logo{
+   padding: 2em 0;
+   margin: 0 auto;
+   display: block; 
+ } /* All the above are for "Mobile First" rule? So the blocbox logo would appear on the second line as block and in the middle? 
+ I don't see the logo when I size down the screen? */
+
+  @media (min-width: 992px){
+   footer{
+     background-color: #3498DB;
+     background-image: linear-gradient(to left,
+        #3498DB 0%, #3498DB 33.33337%, #34495E 33.33337%, #34495E 100%); /* Does this mean the gradient goes from right to left? */
+     height: 100px;
+   }
+   footer p, footer nav ul{
+     padding: 2em 0;
+     text-align: left;
+   }
+   footer .right-footer-block {
+     background-color: #3498DB;
+   }
+   footer .logo{
+     padding: 2em 0 2em 1.5em;
+   } /* Why 2, 0, 2, 1.5? What are these sizing? */
+ }
+
 
 
 
