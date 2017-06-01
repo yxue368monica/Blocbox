@@ -76,7 +76,7 @@ p{
    }
  }
  @media (min-width: 1920px) {
-   .container hero { /* Not sure why "hero" is white...Should it be "hero" instead of "container hero"? 
+   .container.hero { /* Not sure why "hero" is white...Should it be "hero" instead of "container hero"? 
    I did 97% of the screen size according to the ratial observed above */
      width: 1870px;
    }
@@ -150,3 +150,179 @@ p{
    border: 2px solid #2ECC71; /* Why need a border? Seems the same with or without it? */
    text-decoration: none;
  }
+ /* Benefits */
+ .benefits {
+  text-align: center;
+  display: block; /* Why not inline-block here? Is it for the "ul class='container'"? When it's block, 
+  everything center in the center, but inline-block starts at the very beginning? So this can also be applied 
+  to the ".benefit ul" part below? */
+  position: relative;
+ }
+
+.benefits ul {
+  margin: 0 auto;
+  padding: 4em 0;
+}
+.benefits ul li {
+  list-style-type: none;
+  display: inline-block; /* Why not block? They are vertically stacked anyway */
+}
+.benefits i {
+   color:#3498DB;
+   font-size:60px;
+   margin:0;
+   vertical-align: middle;
+ }
+ .benefits h2 {
+   color:#3498DB;
+ }
+ /* Pricing */
+ .pricing {
+   background: #34495E url("../images/background.png") top center no-repeat;
+   background: url("../images/background.png") top center no-repeat, linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
+   /* why we need to repeat the image twice above, can't they be combined? */
+   background-size:cover;
+   text-align: center;
+   padding:4em 0;
+ }
+.pricing h2, .pricing p {
+  color: #FFFFFF;
+}
+.pricing ul {
+   margin:0 auto;
+   padding:2em 0;
+}
+.pricing ul li {
+   list-style-type: none;
+}
+.box {
+   padding:0 15px 15px;
+   background: #FFFFFF;
+   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.20); /* I don't remember there are shadows for the pricing boxes */
+   min-height: 400px; /* What does min-height do? To make sure it does not go any smaller in a small screen like mobile? */
+   position: relative;
+   margin-top: 25px; /* Are padding and Margi interchangeable? When to use what? 
+   Is it usually just specify padding and use margin on one side to position it? */
+ }
+ .box.middle {
+   min-height: 465px;
+   margin-top:0px;
+ }
+.box h3 {
+   font-family: "Lato", Helvetica, Arial, sans-serif; /* We set all h1-h6 to Varela Round, so need to change this back to Lato */
+   text-transform: uppercase;
+   background: #E2E2E2;
+   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.40);
+   left:0;
+   right:0;
+   top:0;
+   text-align: center;
+   margin:0 -15px 40px; /* -15px margin to counter act the 15px padding in the .box */
+   padding:10px 0;
+ }
+ .box h4 {
+   color: #3498DB;
+   font-weight: normal;
+   font-size: 50px;
+   margin: 40px 0 10px;
+ }
+ .box h4 span {
+  vertical-align: top;
+  font-size: 32px;
+ }
+ .box h4 span.month {
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  color: #888888;
+ }
+ .box ul li {
+   font-size:18px;
+   margin-bottom:20px; /* Are there any situation under which padding and margin are interchangeable? */
+   font-weight: 100;
+ }
+ .box .btn {
+   position:absolute; /* Can we use relative here? Even for absolute, it is still relative to 
+   its first parent element that is NOT static */
+   bottom:25px;
+   left:25px;
+   right:25px;
+ }
+.small {
+  font-size: 12px;
+  font-style: italic;
+  color: #FEFEFE;
+  line-height: 15px;
+ }
+
+ /* Testimonials */
+ .testimonials {
+   padding:4em 0;
+   text-align: center;
+ }
+ .testimonials h2 {
+   color:#3498DB;
+ }
+ .testimonials ul li {
+   list-style-type: none;
+ }
+.testimonials blockquote {
+  color: #FFFFFF;
+  font-style: italic;
+  line-height: 24px;
+  background: #34495E;
+  text-align: left;
+  padding: 25px;
+  margin: -5px;
+  position: relative;
+  width: auto; /* Why "width" not "min-width" here? Change depending on the length of the content? */
+}
+.testimonials blockquote:after {
+   top: 100%;
+   left: 13%;
+   border: solid transparent;
+   content: " "; /* Why need this line to show up? */
+   height: 0;
+   width: 0;
+   position: absolute;
+   pointer-events: none;
+   border-top-color: #34495E;
+   border-width: 10px;
+   margin-left: -10px; /* How to undertand this more intuitively? */
+ }
+.testimonials img {
+   height: 65px;
+   width: 65px;
+   border-radius:50%; /* To make it a perfect round */
+   float: left;
+   display: inline-block; /* In relation with the name and title next to it */
+   margin:20px 10px 0 0;
+ }
+ .testimonials p.name {
+   float: left;
+   display: inline-block; /* Doesn't seem to be affected when changed to "inline" or "block" WHY? */
+   text-align: left;
+   font-size:13px;
+   margin-top: 30px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
