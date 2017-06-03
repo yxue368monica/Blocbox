@@ -383,7 +383,6 @@ p{
  footer .right-footer-block {
    background-color: transparent; /* This doesn't specify the div size so it will be as long as the dark blue 
    background-color. But doesn transparent mean it's showing the dark blue then? */
-   display: inline-block;
  }
  footer .logo{
    padding: 2em 0;
@@ -393,25 +392,6 @@ p{
  I don't see the logo when I size down the screen? */
 
   @media (min-width: 320px){
-   footer{
-     background-color: #3498DB;
-     background-image: linear-gradient(to left,
-        #3498DB 0%, #3498DB 33.33337%, #34495E 33.33337%, #34495E 100%);
-   }
-   footer p, footer nav ul{
-     padding: 2em 0;
-     text-align: left;
-     display: block;
-   }
-   footer .right-footer-block {
-     background-color: #3498DB;
-     display: block;
-   }
-   footer .logo{
-     padding: 2em 0 2em 1,5em;
-   } 
- }
-  @media (min-width: 768px){
    footer{
      background-color: #3498DB;
      background-image: linear-gradient(to left,
