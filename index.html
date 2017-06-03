@@ -12,7 +12,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/font-awesome.css">  <!-- the one below will overide the one above, for the same selectors -->
 
   <!-- Animation -->
   <link rel="stylesheet" href="animate.min.css">
@@ -23,7 +23,7 @@
   <header>
     <nav class="container">
       <div class="one-half">
-        <a href="index.html" class="site_logo.png"><img src="images/site_logo.png" alt="Blocbox" /></a> <!-- Is the code above the same as: <a href="index.html"><img src="images/site_logo.png" alt="Blocbox" class="site_logo.png"/></a> ? If not, what's the difference? -->
+        <a href="index.html" class="site_logo.png"><img src="images/site_logo.png" alt="Blocbox" /></a> <!-- Is the code above the same as: <a href="index.html"><img src="images/site_logo.png" alt="Blocbox" class="site_logo.png"/></a> ? SAME! -->
       </div>
       <div class="one-half">
         <ul>
@@ -36,15 +36,15 @@
       <h1 class="animated fadeIn">Save, share and collaborate</h1>
       <p>blocbox lets you collect and sort information.<br/>Create simple notes, store images, and add links.</p>
       <a href="signup.html" class="btn">Start your free trial!</a>
-      <img src="images/dashboard.png" alt="Blocbox"/> <!-- what this "Mac Screen" image needs an "alt"? Alter to what? -->
+      <img id="mac" src="images/dashboard.png" alt="Blocbox"/> <!-- Here alt is mostly for visually inpaired. Also for SEO purposes (they read alt text). -->
     </div>
   </header>
 
-  <main role="main"> <!-- why need this "main" tag if they are alreay broken into different sections? Does main tag work the same as a header / body tag? Also what does "role='main' do? For styling? Different styling on the homepage? -->
+  <main role="main"> <!-- why need this "main" tag if they are alreay broken into different sections? Browser specific-->
 
     <!-- Benefits section -->
     <section class="benefits">
-      <ul class="container"> <!-- There are multiple class that are labeled "container." Is this gonna be a problem when styling? Or as long as they are in different sections, we can style them differently? How is a "ul class" different from "div class"? How to decide which one to use? Same goes to "nav class." Sometimes all of those class equal to "container." Are these just different names or they actually have different functionality? -->
+      <ul class="container"> <!-- There are multiple class that are labeled "container." Is this gonna be a problem when styling? -- NO. BECAUSE WE ARE PUTTING .CONTAINER TO GRIDS SO WE ARE STYLING ALL CONTAINERS AT THE SAME TIME. -->
         <li class="one-third">
           <i class="fa fa-file-o" aria-hidden="true"></i>
           <h2>Create notes</h2>
@@ -153,14 +153,14 @@
 
 
     <!-- Footer section -->
-    <footer> <!-- why "footer"? Why not "section" again? -->
-      <div class="container footer-nav-block"> <!-- why not just "container"? -->
+    <footer> 
+      <div class="container footer-nav-block"> <!-- two classes, both apply -->
         <div class="left-footer-block one-third">
-          <p class="copyright-block">&copy; 2015. <strong>Blocbox</strong> - All Rights Reserved.</p> <!-- How is this "&copy;" different from copy & paste the bookmark sign? --> 
+          <p class="copyright-block">&copy; 2015. <strong>Blocbox</strong> - All Rights Reserved.</p> 
         </div>
         <nav class="link-block middle-footer-block one-third">
-          <ul> <!-- why use an unordered list? Why not using a <p>? -->
-            <li><a href="">Terms</a></li> /  <!-- How is this different from "<li><a href="">Terms</a> /</li>" ? -->
+          <ul> <!-- why use an unordered list? Why not using a <p>? -- IT'S JUST A COMMON PRACTICE. -->
+            <li><a href="">Terms</a></li> /  <!-- How is this different from "<li><a href="">Terms</a> /</li>" ? SAME-->
             <li><a href="">Privacy Policy</a></li> /
             <li><a href="">Contact Us</a></li> /
             <li><a href="">About Us</a></li> /
@@ -168,7 +168,7 @@
           </ul>
         </nav>
         <div class="right-footer-block one-third">
-          <img class="logo" src="images/site_logo.png" alt="Blocbox" /> <!-- why this logo doesn't have a link? Shouldn't we link this back to this homepage again? -->
+          <a href="index.html" class="logo"><img src="images/site_logo.png" alt="Blocbox" /></a>
         </div>
       </div>
     </footer>

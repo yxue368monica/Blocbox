@@ -16,11 +16,10 @@ h2{
 p{
   font-size: 16px;
   line-height: 19px;
-  font-weight: 100;  /* What is font-weight and what is 
-  the difference between "normal" and 100? */
+  font-weight: 100;  /* Font-weight is how thick the characters are, normal is thicker than 100. */
 }
 
-/* GRID */
+/* GRID */ 
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -31,7 +30,7 @@ p{
 .container:before,.container:after {
    content: " ";
    display: table;
- }  /* what do these pseudo class do? and what should be in te " "? */
+ }  /* what do these pseudo class do? and what should be in te " "? A filler? */
 
  .container:after {
    clear: both;
@@ -45,15 +44,38 @@ p{
  and the total amount of code needed is reduced. */
 
  .one-half, .one-third, .one-fourth {
-   width:96%; /* why here they are all 96%? How doea that work? In media query, they all have different ones. */
+   width:96%; /* why here they are all 96%? How does that work? In media query, they all have different ones. */
    float:left;
    position:relative;
    min-height: 1px; /* what does min-height do? */
    margin:0 2% 20px;
  }
+  @media (min-width: 320px) {
+   .container {
+     width: 321px;
+   }
+    .one-half {
+     width:46%;
+   }
+   #mac {
+    width: 100%;
+   }
+ }
  @media (min-width: 768px) {
    .container {
      width: 750px;
+   }
+    .one-half {
+     width:46%;
+   }
+   .one-third {
+     width:29.33333%;
+   }
+   .one-fourth {
+     width:21%;
+   }
+   #mac {
+    width: 70%;
    }
  }
  @media (min-width: 992px) {
@@ -80,7 +102,9 @@ p{
    I did 97% of the screen size according to the ratial observed above */
      width: 1870px;
    }
- }
+ }  /* So using media queries is a responsive design because the styling of the webpage actually changes when you resize the screen?
+ Then do you have to redesign the mobile version again? For laptop screen, some webpages modify the content according to browser size,
+ some don't (content just disappear.) Which one is better? AND ARE SCREEN RESOLUTION AND SIZE THE SAME THING? 
 
  /* Header */
  header {
@@ -92,11 +116,12 @@ p{
    padding:1em 0;
  }
  header nav ul {
-   display:inline; /* Why here is inline? What about inline-block? --> Does this mean the "sign in / sign up together" will still be 
+   display:block; /* Why here is inline? What about inline-block? --> Does this mean the "sign in / sign up together" will still be 
    the same object as the logo, but we want sign in and sign up two be two different objects within themselves? */
+   z-index: 1;
    text-align: right;
    float:right;
-   margin:0;
+   margin:0; /* How to make the sign-in, sign-up not going down to the second line when shrinking the screen size? */
  }
  header nav ul > li {
    list-style-type: none; /* to remove the underline of a link */
@@ -107,6 +132,7 @@ p{
    padding:10px 15px;
    border:2px solid #FFFFFF;
    border-radius: 4px;
+   text-align: center;
  }
  header nav ul > li.btn-outline:hover {  /* Here "hover" is a pseudo class */
    background:#FFFFFF;
@@ -357,6 +383,7 @@ p{
  footer .right-footer-block {
    background-color: transparent; /* This doesn't specify the div size so it will be as long as the dark blue 
    background-color. But doesn transparent mean it's showing the dark blue then? */
+   display: inline-block;
  }
  footer .logo{
    padding: 2em 0;
@@ -365,7 +392,26 @@ p{
  } /* All the above are for "Mobile First" rule? So the blocbox logo would appear on the second line as block and in the middle? 
  I don't see the logo when I size down the screen? */
 
-  @media (min-width: 992px){
+  @media (min-width: 320px){
+   footer{
+     background-color: #3498DB;
+     background-image: linear-gradient(to left,
+        #3498DB 0%, #3498DB 33.33337%, #34495E 33.33337%, #34495E 100%);
+   }
+   footer p, footer nav ul{
+     padding: 2em 0;
+     text-align: left;
+     display: block;
+   }
+   footer .right-footer-block {
+     background-color: #3498DB;
+     display: block;
+   }
+   footer .logo{
+     padding: 2em 0 2em 1,5em;
+   } 
+ }
+  @media (min-width: 768px){
    footer{
      background-color: #3498DB;
      background-image: linear-gradient(to left,
