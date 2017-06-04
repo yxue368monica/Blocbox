@@ -410,9 +410,204 @@ p{
    } /* Why 2, 0, 2, 1.5? What are these sizing? */
  }
 
+/* Dashboard */
+.dashboard {
+  background: #F7F7F7;
+} 
+.left-nav {
+  height: 118vh; /* span 100 to the top and bottom regardlass of browser size -> match viewport? It doesn't go all the way to the bottom */
+  width: 14.66666667%;
+  color: #FFFFFF;
+  background: #34495E;
+  background-image: linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
+  position: fixed;
+  float: left;
+  display: block;
+}
+.left-nav .site-logo {
+   padding:20px 0;
+   background:#34495E;
+   display:block;
+   text-align: center;
+ }
+ .left-nav .items {
+   padding:0 6%;
+ }
+ .left-nav .items p { /* In the course, it listed as ".left-nav .items p"? */
+   font-weight: 600;
+   text-transform: uppercase;
+   font-size: 12px;
+   color: #E2E2E2;
+   line-height: 15px;
+ }
+.left-nav .items ul {
+   margin:0 0 40px;
+   padding:0;
+ }
+ .left-nav .items ul li {
+   list-style-type: none;
+   margin-bottom: 15px;
+ }
+ .left-nav .items ul li a { /* Can I just use ".left-nav a" or ".items a" as selector? Tags, classes, and IDs can be mix used? */
+   color:#FFFFFF;
+   text-decoration: none;
+   font-weight: 300; /* I changed it to 300, 100 is just too light? */
+}
+.left-nav i {
+   width:16px;
+   text-align: center;
+   margin-right:8px;
+ }
+/* Left Navbar Settings */
+.left-nav .settings {
+   position:absolute; /* property locks the settings panel to the bottom of the left-side navigation */
+   background:#22303E;
+   width:100%;
+   bottom:0;
+   left:0;
+   right:0;
+   padding:10px 0;
+ }
+ .left-nav .settings img { 
+   height:35px;
+   width:35px;
+   border-radius: 50%;
+   margin-left:10px;
+   display: inline-block; /* appear nicely next to each other */
+ }
+ .left-nav .settings p {
+   display: inline-block;
+   vertical-align: top;
+   padding-top: 8px; /* What about margin? How to decide when to use "padding," when "margin"? They can achive the same affect? */
+   font-weight: 400;
+   margin:0 0 0 10px;
+ }
+ .left-nav .settings a {
+   color:#FFFFFF;
+   text-decoration: none;
+   text-align: right;
+   float: right;
+   margin-right:10px;
+   margin-top:8px;
+ }
+ .content {
+   padding:6em 1% 1.5em;
+   float:right;
+   width:98%; /* Mobile first so neglact left-nav for now, will adjust later. */
+   position: relative;
+ }
+.content .header {
+   margin:0 1% 20px; /* Why here px instead of em? */
+ }
+ .content .header h1 {
+   font-family: "Lato", Helvetica, Arial, sans-serif;
+   font-weight: 300; /* I changed it to 300, 100 is just too light? Why font-weight: 250 is way thicker than 300? */
+   margin:0 0 30px; /* How to know how much to put for margin and padding? */
+   font-size: 36px;
+   color: #3498DB;
+   line-height: 44px;
+   float: left;
+   display:inline-block;
+ }
+ .content .header > a { /* ">" is to target an element that is directly nested inside another element, 
+ so other "a" under "header" won't get affected? */
+   float:right;
+ }
+ .content-item {
+   width:96%;
+   margin:0 2% 25px;
+   float:left;
+   display:block; /* Why not inline-block? Because mobie first? */
+ }
+ .item-box {
+   display:block;
+   height:230px;
+   background: #FFFFFF;
+   box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.40);
+   position: relative;
+   overflow: hidden; /* Setting the overflow property to hidden crops it within the item-box border. */
+   padding:20px;
+ }
 
-
-
+ /* Larger Mobile Devices */
+ @media (min-width:460px) {
+   .content {
+     padding:1.5em 1%;
+     float:right;
+     width:90%;
+     position: relative;
+   }  
+   .content-item {
+     width:46%;
+     margin:0 2% 25px;
+     float:left;
+     display:block;
+   }
+ }
+ /* Tablets */
+ @media (min-width:768px) {
+   .content {
+     padding:1.5em 5%; /* why 5% padding here on the left and right? */
+     float:right;
+     width:90%;
+     position: relative;
+   }
+   .content > .container { /* With or without the ">" the same? no other container under content anyway? */
+     width:700px;
+   }
+   .content-item {
+     width:31.33333%;
+     margin:0 1% 25px;
+   }
+ }
+  /* Laptops and Desktops */
+@media (min-width:992px) {
+   .content {
+     padding:1.5em 1%;
+     float:right;
+     width:83.33333333%;
+     position: relative;
+   }
+   .content > .container {
+     width:auto; /* What does this mean? -> Span across? */
+   }
+   .content-item {
+     width:23%;
+     margin:0 1% 25px;
+   }
+ }
+ .item-box a > img {
+   position:absolute;
+   height:100%;
+   width:auto; /* Auto is to keep image proportionate. */
+   top:0;
+   left:0;
+   right:0;
+ }
+ .item-box h2 {
+   font-family: 'Lato', Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-size: 15px;
+   line-height: 17px;
+   margin:0;
+ }
+ .item-box a {
+   color: #3498DB;
+   text-decoration: none;
+ }
+ .item-box h2 img {
+   width:16px;
+   height:16px;
+   position:relative;
+   top:2px;
+   margin-right:5px;
+ }
+ .item-box p {
+   font-size: 14px;
+   color: #333333;
+   line-height: 18px;
+   margin:5px 0 0;
+ }
 
 
 
