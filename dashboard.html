@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Dashboard | Blocbox</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato|Varela+Round" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font-awesome.css">  <!-- the one below will overide the one above, for the same selectors -->
+
+  <!-- Animation -->
+  <link rel="stylesheet" href="animate.min.css">
+</head>
+
+<body class="dashboard"> <!-- Why the whole body needs a class? like the role="main"? -->
+  <!-- Left Nav -->
+  <nav id="left-nav" class="left-nav">
+    <a href="#" class="site-logo"><img src="images/site-logo.png" alt="Blocbox" /></a>
+    <div class="items&boxes">
+      <p>Items</p>
+      <ul>
+        <li><a href="#"><i class="fa fa-th-large"></i>All Items</a></li>
+        <li><a href="#"><i class="fa fa-file-o"></i> Notes</a></li>
+        <li><a href="#"><i class="fa fa-picture-o"></i> Images</a></li>
+        <li><a href="#"><i class="fa fa-link"></i> Links</a></li>
+      </ul>
+      <p>Boxes</p>
+      <ul>
+        <li><a href="#"><i class="fa fa-inbox"></i>Landing Pages</a></li>
+        <li><a href="#"><i class="fa fa-inbox"></i> BB Photos</a></li>
+        <li><a href="#"><i class="fa fa fa-plus-square-o"></i> Add a new box</a></li>
+      </ul>
+    </div>
+    <div class="setting">
+      <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" alt="avatar">
+      <p>Joey Kirk</p>
+      <a href="#"><i class="fa fa-gear"></i></a>
+    </div>
+  </nav>
+
+  <main role="main">
+    
+    <!-- Content -->
+    <section class="content">
+      <div class="container"> <!-- Why we need this div .container if we will have the div .header? Just so we don't need to style
+      .header same as .container? how about do "class=container header"? -->
+        <div class="header">
+          <h1>All Items</h1>
+          <a href="#" class="btn">+ Add</a>
+        </div>
+      </div>
+      <div class="container">  <!-- Why so many div?? Is this the same as in Sketch - you have the group, and then the text and the rectangle? -->
+       <div class="content-item">
+         <div class="item-box"> 
+          <a href="#"><img src="images/bar.jpg" alt="bar" /></a> <!-- 1. If this is inside "item-box", then why need another "content-item" outside this? 2.Why not PNG here but JPEG? Also, why not linking this picture? Or should we link the box? 
+          3. No "alt"? SEO? 4. Which is better? Getting image from online directly? -->
+         </div>
+       </div>
+
+        <div class="content-item">
+         <div class="item-box">
+          <a href="#"><h2><img class="favicon" src="images/airbnb.png" />airbnb.com</h2></a> 
+          <!-- Why use the? Not linking the favicon? <h2><img class="favicon" src="https://www.airbnb.com/favicon.ico"> <a href="#">airbnb.com</a></h2> Saving images in the folder and getting it from online, which one is prefered? One has a space inbetween, one doesn't. Is it because of where to get the image or is it because where to put the link? WHERE SHOULD I LINK? -->
+          <p>Vacation Rentals, Homes, Apartments &amp; Rooms for Rent &mdash; Airbnb</p>
+         </div>
+       </div>
+
+        <div class="content-item">
+         <div class="item-box">
+          <a href="#"><h2>Need to find a designer</h2></a> <!-- Is there a preference of nesting: link and h2? -->
+          <p>We have one-person design team, but are ready to expand. We need to look for a second designer right now so we can continue to grow.</p>
+          <p>Put your recommendations here so we can view all of them ... </p>
+         </div>
+        </div>
+
+        <div class="content-item">
+         <div class="item-box">
+          <a href="#"><img src="images/people.jpg" alt="people" /></a>
+         </div>
+       </div>
+
+        <div class="content-item">
+         <div class="item-box">
+          <a href="#"><h2><img class="favicon" src="images/karma.png" />yourkarma.com</h2></a>
+          <p>Karma Go lets you take WIFI everywhere Pay-as-you-go for data that never expires. No contracts or monthly fees. With nationalwide coverage on LTE, stay connected to the internet with all of your devices, seamlessly.</p>
+         </div>
+       </div>
+
+        <div class="content-item">
+         <div class="item-box">
+          <a href="#"><img src="images/computer.jpg" alt="computer" /></a>
+         </div>
+       </div>
+
+        <div class="content-item">
+         <div class="item-box">
+          <a href="#"><h2>Testing</h2></a>
+          <p>I love lamp.</p>
+         </div>
+       </div>
+
+        <div class="content-item">
+         <div class="item-box">
+          <a href="#"><h2><img class="favicon" src="images/invision.png" />invisionapp.com</h2></a>
+          <p>Free Web &amp; Mobile (iOS, Android) Prototyping and UI Mock Up Tool | Invision</p>
+         </div>
+       </div>
+
+        <div class="content-item">
+         <div class="item-box">
+          <a href="#"><img src="images/office.jpg" alt="office" /></a>
+         </div>
+       </div>
+
+        <div class="content-item">
+         <div class="item-box">
+          <a href="#"><h2>Why storing inspiration is great</h2></a>
+          <p>blocbox is a new tool to help collect and store your inspiration and information. From images to links, to notes like this one, you can keep track of all your favorite things.</p>
+         </div>
+       </div>
+
+      </div>
+    </section>
+  </main>
+</body> 
+</html>
