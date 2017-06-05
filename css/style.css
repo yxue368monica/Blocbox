@@ -609,6 +609,11 @@ p{
    margin:5px 0 0;
  }
 
+/* Active list in left Nav */
+.left-nav li:hover, .left-nav li:active {
+  font-size: 18px;
+  background-color: #3498DB;
+}
 
 
 
