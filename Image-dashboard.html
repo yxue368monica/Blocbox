@@ -12,13 +12,16 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/font-awesome.css">  <!-- the one below will overide the one above, for the same selectors -->
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/dropit.css">  <!-- the one below will overide the one above, for the same selectors -->
 
   <!-- Animation -->
   <link rel="stylesheet" href="animate.min.css">
 </head>
 
 <body class="dashboard"> 
+  <!-- Responsive Nav -->
+  <a class="hamburger" id="menu" href="#">&#9776;</a>
   <!-- Left Nav -->
   <nav id="left-nav" class="left-nav">
     <a href="#" class="site-logo"><img src="images/site-logo.png" alt="Blocbox" /></a>
@@ -51,7 +54,17 @@
       <div class="container">
         <div class="header">
           <h1>All Images</h1>
-          <a href="#" class="btn">+ Add</a>
+          <!-- <a href="#" class="btn">+ Add</a> -->
+          <ul class="menu">
+            <li>
+              <a href="#" class="btn">+ Add</a>
+              <ul>
+                  <li><a href="#"><i class="fa fa-file-o"></i> Note</a></li>
+                  <li><a href="#"><i class="fa fa-picture-o"></i> Image</a></li>
+                  <li><a href="#"><i class="fa fa-link"></i> Link</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -156,5 +169,13 @@
       </div>
     </section>
   </main>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/dropit.js"></script>
+  <script type="text/javascript">
+    $(".menu").dropit(); /* This is what link all the dropdown menu style to the actual html file. Also, we can use "/*..." to make comment inside HTML? */
+    $("#menu").click(function(){
+      $("#left-nav").toggleClass("open", 200); /* What is use ".left-nav" instead of "#left-nav"? */
+    });
+  </script>
 </body>
 </html>
