@@ -446,12 +446,19 @@ p{
         #3498DB 0%, #3498DB 33.33337%, #34495E 33.33337%, #34495E 100%); /* Does this mean the gradient goes from right to left? */
      height: 100px;
    }
-   footer p, footer nav ul{
+   footer p {
      padding: 2em 0;
      text-align: left;
      position: relative;
      margin: auto;
-     margin-top: 0.75em; /* I can use a margin on top of another margin? */
+     margin-top: 0.45em; /* I can use a margin on top of another margin? */
+   }
+   footer nav ul{
+     padding: 2em 0;
+     text-align: left;
+     position: relative;
+     margin: auto;
+     margin-top: 0.75em;
    }
    footer .left-footer-block {
      background-color: #34495E;
