@@ -63,7 +63,7 @@ p{
    footer .logo {
     padding: 18px 0 0;
    }
- } 
+ }
  @media (min-width: 768px) {
    .container {
      width: 750px;
@@ -132,7 +132,7 @@ p{
    display:block; /* Why here is inline? What about inline-block? --> Does this mean the "sign in / sign up together" will still be 
    the same object as the logo, but we want sign in and sign up two be two different objects within themselves? */
    z-index: 1;
-   text-align: right;
+   text-align: center;
    float:right;
    margin:0; /* How to make the sign-in, sign-up not going down to the second line when shrinking the screen size? */
  }
