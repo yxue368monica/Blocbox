@@ -603,6 +603,7 @@ p{
    width:35px;
    border-radius: 50%;
    margin-left:10px;
+   margin-top: 4px;
    display: inline-block; /* appear nicely next to each other */
  }
  .left-nav .settings p {
@@ -610,15 +611,22 @@ p{
    vertical-align: top;
    padding-top: 8px; /* What about margin? How to decide when to use "padding," when "margin"? They can achive the same affect? */
    font-weight: 400;
-   margin:0 0 0 10px;
+   margin:4px 0 0 10px;
  }
- .left-nav .settings a {
+ .left-nav .settings a { /* Why if I changed to .settings > a, the gear is not white and it affected the pop up menu? */
    color:#FFFFFF;
    text-decoration: none;
    text-align: right;
    float: right;
    margin-right:10px;
-   margin-top:8px;
+   margin-top:-3px;
+ }
+.left-nav #settings-menu li { /* Why this doesn't work ??? */
+  font-weight: 400;
+ }
+ .content .header > a { /* ">" is to target an element that is directly nested inside another element, 
+ so other "a" under "header" won't get affected? */
+   float:right;
  }
  .content {
    padding:6em 1% 1.5em;
@@ -740,16 +748,10 @@ p{
  }
 
 /* Active list in left Nav */
-.left-nav li:hover, .left-nav li:active {
-  font-size: 18px;
-  background-color: #3498DB;
+.left-nav .items li:hover, .left-nav .items li:active {
+  font-size: 20px;
+  font-weight: 700;
 }
-
-
-
-
-
-
 
 
 

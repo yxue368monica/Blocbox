@@ -1,0 +1,134 @@
+/* left-bav settings example */
+.left-nav .settings img {
+   height:35px;
+   width:35px;
+   border-radius: 50%;
+   margin-left:10px;
+   display: inline-block;
+ }
+ .left-nav .settings p {
+   display: inline-block;
+   vertical-align: top;
+   padding-top: 8px;
+   font-weight: 400;
+   margin:4px 0 0 10px;
+ }
+ .left-nav .settings a {
+   color:#FFFFFF;
+   text-decoration: none;
+   text-align: left;
+   float: right;
+   margin-right:10px;
+   margin-top:20px;
+ }
+
+ .left-nav .settings a.cog {
+   color:#FFFFFF;
+   text-decoration: none;
+   text-align: right;
+   float: right;
+   margin-right:10px;
+   margin-top:-3px;
+ }
+
+.left-nav .items .active {  /* active class? */
+  background-color:#FFFFFF;
+  color: #3498DB;
+  }
+
+
+
+
+
+  /* dropit example */
+    /* .setting .dropit */
+  .settings .dropit .dropit-submenu {
+  position: absolute;
+  bottom: 100%;
+  right: -29px; / dropdown left or right /
+  z-index: 10000;
+  display: none;
+  min-width: 149px;
+  list-style: none;
+  padding: 0px 20px 20px 20px;
+  margin: 10px 0;
+}
+
+  .settings .dropit .dropit-open .dropit-submenu:after {
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px 8px 0px;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -8px;
+  right: 37px;
+ }
+
+
+.dropit {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  float:right;
+  display:inline-block;
+}
+
+.dropit .dropit-trigger { position: relative; }
+
+ /* .content .dropit */
+.content .dropit .dropit-submenu {
+  position: absolute;
+  top: 100%;
+  right: 0; / dropdown left or right /
+  z-index: 1000;
+  display: none;
+  min-width: 100px;
+  list-style: none;
+  padding: 20px;
+  margin: 20px 0 0;
+}
+
+.content .dropit .dropit-open .dropit-submenu:after {
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 8px 8px;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -8px;
+  right: 10px;
+ }
+
+.dropit .dropit-open .dropit-submenu {
+  display: block;
+   background: #FFFFFF;
+   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.30);
+   border-radius: 4px;
+}
+
+ .dropit .dropit-open .dropit-submenu li {
+  display: block;
+  margin-bottom: 20px;
+ }
+ .dropit .dropit-open .dropit-submenu li:last-child {
+  margin-bottom: 0px;
+ }
+ .dropit .dropit-open .dropit-submenu li a {
+  color:#34495E;
+  text-decoration: none;
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-weight:100;
+ }
+
+/* Active list in Add Dropdown */
+.menu ul li:hover, .menu ul li:active {
+  background-color: #2ECC71;
+  font-size: 18px;
+  color: #FFFFFF; /* Why the color won't become white ??? */
+ }
+

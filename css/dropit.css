@@ -8,15 +8,17 @@
  */
 
 /* These styles assume you are using ul and li */
-.dropit {
-    list-style: none;
-	padding: 0;
-    margin: 15px 0 0;
-    float:right;
-    display:inline-block;
+
+/* Create the actual dropdown box and style shadow */
+.content .dropit .dropit-open .dropit-submenu {
+   display: block; /* Why above is "inline-block," here is "block" */
+   background: #FFFFFF;
+   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.30);
+   border-radius: 4px;
 }
-.dropit .dropit-trigger { position: relative; }
-.dropit .dropit-submenu {
+
+/* Style the relationship between Dropdown box and the li inside */
+.content .dropit .dropit-submenu {
     position: absolute;
     top: 100%;
     right: 0; /* dropdown left or right. What does this left and right do? */
@@ -27,17 +29,13 @@
 	padding: 20px;
 	margin: 20px 0 0;
 }
-.dropit .dropit-open .dropit-submenu {
-   display: block; /* Why above is "inline-block," here is "block" */
-   background: #FFFFFF;
-   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.30);
-   border-radius: 4px;
-}
-.dropit .dropit-open .dropit-submenu:after { /* A pseudo class for the triangle */
+
+/* Create and style the triangle */
+.content .dropit .dropit-open .dropit-submenu:after { /* A pseudo class for the triangle */
   content: " ";
   position: absolute; 
   border-style: solid;
-  border-width: 0 8px 8px;
+  border-width: 0 8px 8px 8px; /* What are these refering to? */ 
   border-color: #FFFFFF transparent;
   display: block;
   width: 0;
@@ -45,9 +43,68 @@
   top: -8px;
   right: 10px;
  }
+
+
+/* Create the actual dropdown box and style shadow */
+.settings .dropit .dropit-open .dropit-submenu {
+   display: block; /* Why above is "inline-block," here is "block" */
+   background: #FFFFFF;
+   box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.30);
+   border-radius: 4px;
+   margin-bottom: 10px;
+}
+
+ /* Style the li inside the dropdown menu */
+.settings .dropit .dropit-open .dropit-submenu li {
+  display: block;
+  margin-bottom: 20px;
+  float: left; /* To make sure both dropdown lists are left aligned */
+  margin-right: -2em;
+ }
+
+ /* Style the relationship between Dropdown box and the li inside */
+.settings .dropit .dropit-submenu {
+    position: absolute;
+    bottom: 100%; /* flip the dropdown -> becomes pop up */
+    right: 0; /* dropdown left or right. What does this left and right do? */
+    z-index: 1000;
+    display: none;
+    min-width: 150px;
+    list-style: none;
+    padding: 20px;
+    margin: 20px 0 0;
+}
+
+/* Create and style the triangle */
+.settings .dropit .dropit-open .dropit-submenu:after { /* A pseudo class for the triangle */
+  content: " ";
+  position: absolute; 
+  border-style: solid;
+  border-width: 8px 8px 0 8px; /* What are these refering to? */ 
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -7px; /* Change the position of the triangle */
+  right: 18px;
+ }
+
+/* Style the actual button */
+.dropit {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+    float:right;
+    display:inline-block;
+}
+/* Style the distance between the button and the dropdown menu */
+ .dropit .dropit-trigger { position: relative; }
+
+ /* Style the li inside the dropdown menu */
  .dropit .dropit-open .dropit-submenu li {
   display: block;
   margin-bottom: 20px;
+  float: left; /* To make sure both dropdown lists are left aligned */
  }
  .dropit .dropit-open .dropit-submenu li:last-child { /* We don't want any extra padding or margin on the last link in submenu */
   margin-bottom: 0px;
@@ -58,3 +115,27 @@
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight:100;
  }
+
+/* When we modify drop it for our own use, do we need to keep a copy of the original or we can modify on top of it? */
+/* In example, it seems there are only two sections of the dropit really impact the dropdown?? */ 
+/* The position of those codes matters, any shared parts, bottom overides the top! */
+
+
+/* Active list in Add Dropdown 
+.dropit .dropit-open .dropit-submenu li:hover, .dropit .dropit-open .dropit-submenu li:active {
+  background-color: #333333;
+ } */
+
+.dropit .dropit-open .dropit-submenu li a:hover, .dropit .dropit-open .dropit-submenu li a:active {
+  font-size: 18px;
+  font-weight: 400;
+  color: #3498DB; 
+ }
+
+
+
+
+
+
+
+
