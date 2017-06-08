@@ -50,6 +50,20 @@ p{
    min-height: 1px; /* what does min-height do? */
    margin:0 2% 20px;
  }
+ @media (min-width: 320px) {
+   .container {
+     width: 312px;
+   }
+    .one-half {
+     width:46%;
+   }
+   #mac {
+    width: 100%;
+   }
+   footer .logo {
+    padding: 18px 0 0;
+   }
+ }
  @media (min-width: 460px) {
    .container {
      width: 446px;
@@ -404,7 +418,45 @@ p{
  } /* All the above are for "Mobile First" rule? So the blocbox logo would appear on the second line as block and in the middle? 
  I don't see the logo when I size down the screen? */
 
-@media (min-width: 460px) {
+@media (min-width: 320px) {
+   footer {
+    height: 300px;
+   }
+   footer .left-footer-block{
+    width: 446px;
+    height: 100px;
+    background-color: #34495E;
+    display: block;
+   }
+   footer p {
+    padding: 0, auto;
+    text-align: center;
+    margin-top: 3em;
+    margin-left: -7em;
+    position: relative;
+   }
+   footer nav ul {
+    padding: 0, auto;
+    text-align: center;
+    margin-top: -7em;
+    margin-left: -3em;
+    position: relative;
+   }
+   footer .right-footer-block{
+    width: 446px;
+    height: 100px;
+    background-color: #3498DB;
+    display: block;
+   }
+   footer .logo {
+    padding: 0, auto;
+    text-align: center;
+    margin-top: -2.5em;
+    margin-left: -7.5em;
+    position: relative;
+   }
+ } 
+ @media (min-width: 460px) {
    footer {
     height: 300px;
    }
