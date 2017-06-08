@@ -529,7 +529,7 @@ p{
 
 @media (min-width:992px) {
 .left-nav {
-  height: 100vh; /* span 100 to the top and bottom regardlass of browser size -> match viewport? It doesn't go all the way to the bottom */
+  min-height: 100vh; /* span 100 to the top and bottom regardlass of browser size -> match viewport? It doesn't go all the way to the bottom */
   width: 14.66666667%;
   color: #FFFFFF;
   background: #34495E;
