@@ -66,7 +66,7 @@
 .settings .dropit .dropit-submenu {
     position: absolute;
     bottom: 100%; /* flip the dropdown -> becomes pop up */
-    right: 0; /* dropdown left or right. What does this left and right do? */
+    right: 0; /* dropdown left or right. What does this left and right do? Not give any style to the right. */
     z-index: 1000;
     display: none;
     min-width: 150px;
@@ -105,6 +105,7 @@
   display: block;
   margin-bottom: 20px;
   float: left; /* To make sure both dropdown lists are left aligned */
+  line-height: 25px;
  }
  .dropit .dropit-open .dropit-submenu li:last-child { /* We don't want any extra padding or margin on the last link in submenu */
   margin-bottom: 0px;

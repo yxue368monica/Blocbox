@@ -629,6 +629,7 @@ p{
  .left-nav .items ul li {
    list-style-type: none;
    margin-bottom: 15px;
+   line-height: 25px;
  }
  .left-nav .items ul li a { /* Can I just use ".left-nav a" or ".items a" as selector? Tags, classes, and IDs can be mix used? */
    color:#FFFFFF;
@@ -801,8 +802,8 @@ p{
  }
 
 /* Active list in left Nav */
-.left-nav .items li:hover, .left-nav .items li:active {
-  font-size: 20px;
+.left-nav .items a:hover, .left-nav .items a:active {
+  font-size: 18px;
   font-weight: 700;
 }
 
