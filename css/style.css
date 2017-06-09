@@ -664,6 +664,7 @@ p{
    padding-top: 8px; /* What about margin? How to decide when to use "padding," when "margin"? They can achive the same affect? */
    font-weight: 400;
    margin:4px 0 0 10px;
+   color: #FFFFFF;
  }
  .left-nav .settings a { /* Why if I changed to .settings > a, the gear is not white and it affected the pop up menu? */
    color:#FFFFFF;
